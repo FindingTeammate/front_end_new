@@ -1,0 +1,13 @@
+.accepted-requests-container {
+  max-height: 100vh !important;
+  min-height: 90vh !important;
+  padding: 2rem;
+
+  .accepted-request-item {
+    margin: 1rem 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

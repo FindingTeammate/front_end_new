@@ -35,8 +35,7 @@ const AcceptedRequests = () => {
             className={styles["accepted-request-item"]}
           >
             <p>
-              <span>Name : </span>
-              {`${request.first_name} ${request.last_name}`}
+              <span>Name : </span> {`${request.first_name} ${request.last_name}`}
             </p>
             <p>
               <span>Email: </span> {request.email}

@@ -84,7 +84,7 @@ const UserList = () => {
             id="input-demo"
             withAsterisk
             label="Search for a specific user"
-            description="Please enter the name of the User you want to search"
+            // description="Please enter the name of the User you want to search"
             error=""
           >
             <Input

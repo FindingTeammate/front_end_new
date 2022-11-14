@@ -50,7 +50,7 @@ const Login = () => {
   };
 
   return (
-    <section>
+    <section className={styles["body-container"]}>
       <div className={styles["form-container"]}>
         <h2 className={styles["form-header"]}>Login</h2>
         <Input

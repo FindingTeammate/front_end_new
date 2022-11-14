@@ -52,54 +52,56 @@ const Register = () => {
   };
 
   return (
-    <div className={styles["register-container"]}>
-      <div>
-        <Input
-          placeholder="First Name"
-          className={styles["mantine-Input-wrapper"]}
-          name="first_name"
-          onChange={handleFormChange}
-        />
-        <Input
-          placeholder="Last Name"
-          className={styles["mantine-Input-wrapper"]}
-          name="last_name"
-          onChange={handleFormChange}
-        />
-        <Input
-          placeholder="Username"
-          className={styles["mantine-Input-wrapper"]}
-          name="username"
-          onChange={handleFormChange}
-        />
-        <Input
-          placeholder="Email"
-          className={styles["mantine-Input-wrapper"]}
-          name="email"
-          onChange={handleFormChange}
-        />
-        <PasswordInput
-          withAsterisk
-          placeholder="Password"
-          className={styles["mantine-Input-wrapper"]}
-          name="password"
-          onChange={handleFormChange}
-        />
-        <PasswordInput
-          placeholder="Confirm Password"
-          withAsterisk
-          className={styles["mantine-Input-wrapper"]}
-          name="password2"
-          onChange={handleFormChange}
-        />
-        <Button onClick={handleFormSubmit}>
-          {mutation.isLoading ? "Registering..." : "Register"}
-        </Button>
+    <section className={styles["body-container"]}>
+      <div className={styles["register-container"]}>
+        <div>
+          <Input
+            placeholder="First Name"
+            className={styles["mantine-Input-wrapper"]}
+            name="first_name"
+            onChange={handleFormChange}
+          />
+          <Input
+            placeholder="Last Name"
+            className={styles["mantine-Input-wrapper"]}
+            name="last_name"
+            onChange={handleFormChange}
+          />
+          <Input
+            placeholder="Username"
+            className={styles["mantine-Input-wrapper"]}
+            name="username"
+            onChange={handleFormChange}
+          />
+          <Input
+            placeholder="Email"
+            className={styles["mantine-Input-wrapper"]}
+            name="email"
+            onChange={handleFormChange}
+          />
+          <PasswordInput
+            withAsterisk
+            placeholder="Password"
+            className={styles["mantine-Input-wrapper"]}
+            name="password"
+            onChange={handleFormChange}
+          />
+          <PasswordInput
+            placeholder="Confirm Password"
+            withAsterisk
+            className={styles["mantine-Input-wrapper"]}
+            name="password2"
+            onChange={handleFormChange}
+          />
+          <Button onClick={handleFormSubmit}>
+            {mutation.isLoading ? "Registering..." : "Register"}
+          </Button>
+        </div>
+        {mutation.isError ? (
+          <p>Form submit error: {mutation.error.message}</p>
+        ) : null}
       </div>
-      {mutation.isError ? (
-        <p>Form submit error: {mutation.error.message}</p>
-      ) : null}
-    </div>
+    </section>
   );
 };
 

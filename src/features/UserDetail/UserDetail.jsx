@@ -86,7 +86,7 @@ const UserDetail = () => {
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 
   return (
-    <div className={styles["user-detail-container"]}>
+    <section className={styles["user-detail-container"]}>
       {isLoading ? (
         <Loader />
       ) : (
@@ -295,7 +295,7 @@ const UserDetail = () => {
           </Modal>
         </>
       )}
-    </div>
+    </section>
   );
 };
 

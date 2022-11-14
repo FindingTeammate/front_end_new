@@ -22,13 +22,13 @@ export default function Root() {
       <nav>
         {location.pathname.startsWith("/user") ? (
           <div className={styles.appContainer}>
-            <NavLink to={`/user-detail/${id}`} className={styles["me"]}>
-              Me
-            </NavLink>
             <NavLink to="/user-list" className={styles["home"]}>
               FTM
             </NavLink>
             <div>
+              <NavLink to={`/user-detail/${id}`} className={styles["me"]}>
+                Me
+              </NavLink>
               <NavLink
                 to="/user-accepted-requests"
                 className={styles["logout"]}
@@ -42,8 +42,12 @@ export default function Root() {
           </div>
         ) : (
           <div className={styles.authContainer}>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
+            <NavLink to="/login" className={styles["logout"]}>
+              Login
+            </NavLink>
+            <NavLink to="/register" className={styles["logout"]}>
+              Register
+            </NavLink>
           </div>
         )}
       </nav>

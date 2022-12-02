@@ -71,7 +71,9 @@ const UserDetail = () => {
     (request) => request?.to_user == data?.username
   );
 
-  const requestAccepted = acceptedRequestsData?.some(
+  console.log({ sentRequestsData, acceptedRequestsData });
+
+  const requestAccepted = acceptedRequestsData?.some?.(
     (request) => request?.username == data?.username
   );
 
